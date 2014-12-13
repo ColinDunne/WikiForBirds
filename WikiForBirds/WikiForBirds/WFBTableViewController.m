@@ -7,36 +7,17 @@
 //
 
 #import "WFBTableViewController.h"
+#import "WFBBirdVO.h"
 
 @interface WFBTableViewController ()
-@property(nonatomic,strong)NSMutableArray *birds;
+
 @end
 
 @implementation WFBTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSString *name1 = @"绿头鸭";
-    [self.birds addObject:name1];
-    NSString *name2 = @"鸳鸯";
-    [self.birds addObject:name2];
-    NSString *name3 = @"小䴙䴘";
-    [self.birds addObject:name3];
-    NSString *name4 = @"普通翠鸟";
-    [self.birds addObject:name4];
-    NSString *name5 = @"白鹭";
-    [self.birds addObject:name5];
-    NSString *name6 = @"夜鹭";
-    [self.birds addObject:name6];
-    NSString *name7 = @"大斑啄木鸟";
-    [self.birds addObject:name7];
-    NSString *name8 = @"戴胜";
-    [self.birds addObject:name8];
-    NSString *name9 = @"四声杜鹃";
-    [self.birds addObject:name9];
-    NSString *name10 = @"珠颈斑鸠";
-    [self.birds addObject:name10];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +39,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bird" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.birds objectAtIndex:indexPath.row];
+    WFBBirdVO *itemVO = [self.birds objectAtIndex:indexPath.row];
+    cell.textLabel.text = itemVO.scientificName;
     
     return cell;
 }

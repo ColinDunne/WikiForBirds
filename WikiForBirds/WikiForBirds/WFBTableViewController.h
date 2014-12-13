@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WFBTableViewController : UITableViewController
-
+@property(nonatomic,strong)NSMutableArray *birds;
 @end
