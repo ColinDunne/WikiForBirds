@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		D026DE191A3A739400302F78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE181A3A739400302F78 /* main.m */; };
 		D026DE1C1A3A739400302F78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE1B1A3A739400302F78 /* AppDelegate.m */; };
-		D026DE1F1A3A739400302F78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE1E1A3A739400302F78 /* ViewController.m */; };
 		D026DE221A3A739400302F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D026DE201A3A739400302F78 /* Main.storyboard */; };
 		D026DE241A3A739400302F78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D026DE231A3A739400302F78 /* Images.xcassets */; };
 		D026DE271A3A739400302F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D026DE251A3A739400302F78 /* LaunchScreen.xib */; };
 		D026DE331A3A739400302F78 /* WikiForBirdsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE321A3A739400302F78 /* WikiForBirdsTests.m */; };
+		D026DE3E1A3C0EC600302F78 /* WFBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE3D1A3C0EC600302F78 /* WFBTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		D026DE181A3A739400302F78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D026DE1A1A3A739400302F78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D026DE1B1A3A739400302F78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D026DE1D1A3A739400302F78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D026DE1E1A3A739400302F78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D026DE211A3A739400302F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D026DE231A3A739400302F78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D026DE261A3A739400302F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D026DE2C1A3A739400302F78 /* WikiForBirdsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiForBirdsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D026DE311A3A739400302F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D026DE321A3A739400302F78 /* WikiForBirdsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WikiForBirdsTests.m; sourceTree = "<group>"; };
+		D026DE3C1A3C0EC600302F78 /* WFBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBTableViewController.h; sourceTree = "<group>"; };
+		D026DE3D1A3C0EC600302F78 /* WFBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +81,9 @@
 		D026DE151A3A739400302F78 /* WikiForBirds */ = {
 			isa = PBXGroup;
 			children = (
-				D026DE1A1A3A739400302F78 /* AppDelegate.h */,
-				D026DE1B1A3A739400302F78 /* AppDelegate.m */,
-				D026DE1D1A3A739400302F78 /* ViewController.h */,
-				D026DE1E1A3A739400302F78 /* ViewController.m */,
+				D026DE3C1A3C0EC600302F78 /* WFBTableViewController.h */,
+				D026DE3D1A3C0EC600302F78 /* WFBTableViewController.m */,
 				D026DE201A3A739400302F78 /* Main.storyboard */,
-				D026DE231A3A739400302F78 /* Images.xcassets */,
-				D026DE251A3A739400302F78 /* LaunchScreen.xib */,
 				D026DE161A3A739400302F78 /* Supporting Files */,
 			);
 			path = WikiForBirds;
@@ -96,6 +92,10 @@
 		D026DE161A3A739400302F78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D026DE1A1A3A739400302F78 /* AppDelegate.h */,
+				D026DE1B1A3A739400302F78 /* AppDelegate.m */,
+				D026DE231A3A739400302F78 /* Images.xcassets */,
+				D026DE251A3A739400302F78 /* LaunchScreen.xib */,
 				D026DE171A3A739400302F78 /* Info.plist */,
 				D026DE181A3A739400302F78 /* main.m */,
 			);
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D026DE1F1A3A739400302F78 /* ViewController.m in Sources */,
 				D026DE1C1A3A739400302F78 /* AppDelegate.m in Sources */,
+				D026DE3E1A3C0EC600302F78 /* WFBTableViewController.m in Sources */,
 				D026DE191A3A739400302F78 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
