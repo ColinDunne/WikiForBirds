@@ -12,7 +12,7 @@
 @property(nonatomic,strong)NSString *scientificName;
 @property(nonatomic,strong)NSString *englishName;
 @property(nonatomic,strong)NSString *chineseName;
-@property(nonatomic,strong)NSString *subImageURL;
+@property(nonatomic,strong)NSURL *subImageURL;
 @property(nonatomic,strong)NSMutableArray *fullImageURLs; // of full image URL
 @property(nonatomic,strong)NSMutableString *descriptionOnWiki;
 

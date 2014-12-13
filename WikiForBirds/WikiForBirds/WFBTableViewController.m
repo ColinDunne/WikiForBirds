@@ -8,6 +8,7 @@
 
 #import "WFBTableViewController.h"
 #import "WFBBirdVO.h"
+#import "WFBTableViewCell.h"
 
 @interface WFBTableViewController ()
 
@@ -37,10 +38,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bird" forIndexPath:indexPath];
+    WFBTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bird" forIndexPath:indexPath];
     
     WFBBirdVO *itemVO = [self.birds objectAtIndex:indexPath.row];
-    cell.textLabel.text = itemVO.scientificName;
+    cell.scientificName.text = itemVO.scientificName;
+    cell.englishName.text = itemVO.englishName;
+    cell.subImageURL = itemVO.subImageURL;
     
     return cell;
 }
