@@ -42,12 +42,20 @@
                                                 <rect key="frame" x="68" y="38" width="225" height="21"/>
                                             </variation>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-9X-6wK">
+                                            <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="12" y="11" width="37" height="37"/>
+                                            </variation>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="cfa-TV-cRs"/>
                                             <exclude reference="Cb1-Kh-Bp1"/>
                                             <exclude reference="6Vy-lc-efs"/>
+                                            <exclude reference="5lg-9X-6wK"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -55,12 +63,14 @@
                                             <include reference="cfa-TV-cRs"/>
                                             <include reference="Cb1-Kh-Bp1"/>
                                             <include reference="6Vy-lc-efs"/>
+                                            <include reference="5lg-9X-6wK"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="englishName" destination="6Vy-lc-efs" id="eAQ-uI-asv"/>
                                     <outlet property="scientificName" destination="Cb1-Kh-Bp1" id="g0P-tr-euQ"/>
+                                    <outlet property="spinner" destination="5lg-9X-6wK" id="zOw-94-2B5"/>
                                     <outlet property="subImageView" destination="cfa-TV-cRs" id="cZV-Ry-ved"/>
                                 </connections>
                             </tableViewCell>
