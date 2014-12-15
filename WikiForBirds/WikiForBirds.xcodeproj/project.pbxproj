@@ -16,6 +16,7 @@
 		D026DE3E1A3C0EC600302F78 /* WFBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE3D1A3C0EC600302F78 /* WFBTableViewController.m */; };
 		D026DE421A3C1F5000302F78 /* WFBBirdVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE411A3C1F5000302F78 /* WFBBirdVO.m */; };
 		D026DE451A3C83EF00302F78 /* WFBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */; };
+		D0F3D3211A3EF7450014C606 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D31F1A3EF7450014C606 /* pinyin.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		D026DE411A3C1F5000302F78 /* WFBBirdVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBBirdVO.m; path = Model/WFBBirdVO.m; sourceTree = "<group>"; };
 		D026DE431A3C83EF00302F78 /* WFBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBTableViewCell.h; sourceTree = "<group>"; };
 		D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBTableViewCell.m; sourceTree = "<group>"; };
+		D0F3D31F1A3EF7450014C606 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		D0F3D3201A3EF7450014C606 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */,
 				D026DE201A3A739400302F78 /* Main.storyboard */,
 				D026DE3F1A3C1EF000302F78 /* Model */,
+				D0F3D31E1A3EF6B50014C606 /* Tools */,
 				D026DE161A3A739400302F78 /* Supporting Files */,
 			);
 			path = WikiForBirds;
@@ -135,6 +139,15 @@
 				D026DE411A3C1F5000302F78 /* WFBBirdVO.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D0F3D31E1A3EF6B50014C606 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D0F3D31F1A3EF7450014C606 /* pinyin.c */,
+				D0F3D3201A3EF7450014C606 /* pinyin.h */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F3D3211A3EF7450014C606 /* pinyin.c in Sources */,
 				D026DE1C1A3A739400302F78 /* AppDelegate.m in Sources */,
 				D026DE3E1A3C0EC600302F78 /* WFBTableViewController.m in Sources */,
 				D026DE191A3A739400302F78 /* main.m in Sources */,
@@ -432,6 +446,7 @@
 				D026DE381A3A739400302F78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D026DE391A3A739400302F78 /* Build configuration list for PBXNativeTarget "WikiForBirdsTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +455,7 @@
 				D026DE3B1A3A739400302F78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

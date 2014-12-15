@@ -21,11 +21,11 @@
     return self;
 }
 
-- (instancetype)initWithChineseName:(NSString *)chineseName andSectionName:(NSString *)sectionName {
+- (instancetype)initWithChineseName:(NSString *)chineseName andInitialName:(NSString *)initialName {
     self = [super init];
     if (self) {
         self.chineseName = chineseName;
-        self.sectionName = sectionName;
+        self.initialName = initialName;
     }
     
     return self;

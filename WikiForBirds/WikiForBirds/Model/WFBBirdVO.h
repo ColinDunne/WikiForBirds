@@ -12,7 +12,7 @@
 @property(nonatomic,strong)NSString *scientificName;
 @property(nonatomic,strong)NSString *englishName;
 @property(nonatomic,strong)NSString *chineseName;
-@property(nonatomic,strong)NSString *sectionName;
+@property(nonatomic,strong)NSString *initialName;
 @property(nonatomic,strong)NSURL *thumbnailImageURL;
 @property(nonatomic,strong)NSMutableArray *fullImageURLs; // of full image URL
 @property(nonatomic,strong)NSMutableString *descriptionOnWiki;
@@ -21,6 +21,6 @@
 
 - (instancetype)initWithChineseName:(NSString *)chineseName;
 
-- (instancetype)initWithChineseName:(NSString *)chineseName andSectionName:(NSString *)sectionName;
+- (instancetype)initWithChineseName:(NSString *)chineseName andInitialName:(NSString *)initialName;
 
 @end
