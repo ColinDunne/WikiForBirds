@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WFBTableViewCell : UITableViewCell
-@property (nonatomic,strong) NSURL *subImageURL;
-@property (weak, nonatomic) IBOutlet UIImageView *subImageView;
-@property (weak, nonatomic) IBOutlet UILabel *scientificName;
+@property (nonatomic,strong) NSURL *thumbnailImageURL;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *chineseName;
 @property (weak, nonatomic) IBOutlet UILabel *englishName;
 @end

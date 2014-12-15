@@ -48,9 +48,9 @@
     WFBTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bird" forIndexPath:indexPath];
     
     WFBBirdVO *itemVO = [self.birds objectAtIndex:indexPath.row];
-    cell.scientificName.text = itemVO.scientificName;
+    cell.chineseName.text = itemVO.chineseName;
     cell.englishName.text = itemVO.englishName;
-    cell.subImageURL = itemVO.subImageURL;
+    cell.thumbnailImageURL = itemVO.thumbnailImageURL;
     
     return cell;
 }

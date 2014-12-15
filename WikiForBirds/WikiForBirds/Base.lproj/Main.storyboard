@@ -24,54 +24,54 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb1-Kh-Bp1">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb1-Kh-Bp1">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="68" y="9" width="225" height="21"/>
+                                                <rect key="frame" x="68" y="8" width="225" height="21"/>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vy-lc-efs">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="68" y="38" width="225" height="21"/>
-                                            </variation>
-                                        </label>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-9X-6wK">
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-9X-6wK">
                                             <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                             <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="12" y="11" width="37" height="37"/>
+                                                <rect key="frame" x="20" y="20" width="20" height="20"/>
                                             </variation>
                                         </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vy-lc-efs">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="68" y="30" width="225" height="21"/>
+                                            </variation>
+                                        </label>
                                     </subviews>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="cfa-TV-cRs"/>
                                             <exclude reference="Cb1-Kh-Bp1"/>
-                                            <exclude reference="6Vy-lc-efs"/>
                                             <exclude reference="5lg-9X-6wK"/>
+                                            <exclude reference="6Vy-lc-efs"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="cfa-TV-cRs"/>
                                             <include reference="Cb1-Kh-Bp1"/>
-                                            <include reference="6Vy-lc-efs"/>
                                             <include reference="5lg-9X-6wK"/>
+                                            <include reference="6Vy-lc-efs"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="englishName" destination="6Vy-lc-efs" id="eAQ-uI-asv"/>
-                                    <outlet property="scientificName" destination="Cb1-Kh-Bp1" id="g0P-tr-euQ"/>
+                                    <outlet property="chineseName" destination="Cb1-Kh-Bp1" id="y8I-jj-BaX"/>
+                                    <outlet property="englishName" destination="6Vy-lc-efs" id="MmQ-Pp-5LX"/>
                                     <outlet property="spinner" destination="5lg-9X-6wK" id="zOw-94-2B5"/>
-                                    <outlet property="subImageView" destination="cfa-TV-cRs" id="cZV-Ry-ved"/>
+                                    <outlet property="thumbnailImageView" destination="cfa-TV-cRs" id="FFZ-yV-7w7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -84,7 +84,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tcx-0C-nBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012.5" y="389"/>
+            <point key="canvasLocation" x="1011" y="391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="851-IE-j0h">

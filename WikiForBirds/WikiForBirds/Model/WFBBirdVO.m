@@ -12,20 +12,20 @@
 
 #pragma mark - Init Method
 
-- (instancetype)initWithScientificName:(NSString *)scientificName {
+- (instancetype)initWithChineseName:(NSString *)chineseName {
     self = [super init];
     if (self) {
-        self.scientificName = scientificName;
+        self.chineseName = chineseName;
     }
     
     return self;
 }
 
-- (instancetype)initWithScientificName:(NSString *)scientificName andEnglishName:(NSString *)englishName {
+- (instancetype)initWithChineseName:(NSString *)chineseName andSectionName:(NSString *)sectionName {
     self = [super init];
     if (self) {
-        self.scientificName = scientificName;
-        self.englishName = englishName;
+        self.chineseName = chineseName;
+        self.sectionName = sectionName;
     }
     
     return self;
