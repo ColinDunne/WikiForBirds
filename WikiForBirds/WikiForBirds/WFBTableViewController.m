@@ -36,18 +36,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [self.birdDictionary count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSString *key = [[self keysOfDictionary:self.birdDictionary] objectAtIndex:section];
+    NSMutableArray *birdArray = [self.birdDictionary objectForKey:key];
 
-    return [self.birds count];
+    return [birdArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WFBTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bird" forIndexPath:indexPath];
     
-    WFBBirdVO *itemVO = [self.birds objectAtIndex:indexPath.row];
+    NSString *key = [[self keysOfDictionary:self.birdDictionary] objectAtIndex:indexPath.section];
+    NSMutableArray *birdArray = [self.birdDictionary objectForKey:key];
+    
+    WFBBirdVO *itemVO = [birdArray objectAtIndex:indexPath.row];
     cell.chineseName.text = itemVO.chineseName;
     cell.englishName.text = itemVO.englishName;
     cell.thumbnailImageURL = itemVO.thumbnailImageURL;
@@ -55,7 +60,32 @@
     return cell;
 }
 
+/*
+ Section-related methods: Retrieve the section titles and section index titles from the collation.
+ */
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSArray *keys = [self keysOfDictionary:self.birdDictionary];
+    return [keys objectAtIndex:section];
+}
+
+
+//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+//    return [self keysOfDictionary:self.birdDictionary];
+//}
+//
+//
+//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+//    return [self.collation sectionForSectionIndexTitleAtIndex:index];
+//}
+
+#pragma mark -
+
+- (NSArray *)keysOfDictionary:(NSDictionary *)birdDictionary {
+    NSArray *keys = [self.birdDictionary allKeys];
+    keys = [keys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    return keys;
+}
 
 
 #pragma mark - Navigation
@@ -67,11 +97,11 @@
 
 #pragma mark - Lazy instantiation
 
-- (NSMutableArray *)birds {
-    if (!_birds) {
-        _birds = [[NSMutableArray alloc] init];
+- (NSMutableDictionary *)birdDictionary {
+    if (!_birdDictionary) {
+        _birdDictionary = [[NSMutableDictionary alloc] init];
     }
-    return _birds;
+    return _birdDictionary;
 }
 
 @end

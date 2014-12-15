@@ -21,20 +21,14 @@
     return self;
 }
 
-- (instancetype)initWithChineseName:(NSString *)chineseName andInitialName:(NSString *)initialName {
-    self = [super init];
-    if (self) {
-        self.chineseName = chineseName;
-        self.initialName = initialName;
-    }
-    
-    return self;
+- (NSComparisonResult)compare:(WFBBirdVO *)bird {
+   return [self.pinyin caseInsensitiveCompare:bird.pinyin];
 }
 
 #pragma mark - Description For Log
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"Bird ScientificName:%@ \n EnglishName:%@ \n ChinessName:%@ \n",self.scientificName,self.englishName,self.chineseName];
+    return [NSString stringWithFormat:@"Bird pinyin:%@",self.pinyin];
 }
 
 @end
