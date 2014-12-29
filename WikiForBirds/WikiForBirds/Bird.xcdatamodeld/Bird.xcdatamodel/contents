@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="WFBBird" representedClassName="WFBBird" syncable="YES">
+        <attribute name="bird" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chineseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailImage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="species" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WFBSpecies" inverseName="birds" inverseEntity="WFBSpecies" syncable="YES"/>
+    </entity>
+    <entity name="WFBFamily" representedClassName="WFBFamily" syncable="YES">
+        <attribute name="chineseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="family" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genera" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WFBGenus" inverseName="family" inverseEntity="WFBGenus" syncable="YES"/>
+        <relationship name="ordo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WFBOrder" inverseName="families" inverseEntity="WFBOrder" syncable="YES"/>
+    </entity>
+    <entity name="WFBGenus" representedClassName="WFBGenus" syncable="YES">
+        <attribute name="chineseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genus" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="family" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WFBFamily" inverseName="genera" inverseEntity="WFBFamily" syncable="YES"/>
+        <relationship name="species" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WFBSpecies" inverseName="genus" inverseEntity="WFBSpecies" syncable="YES"/>
+    </entity>
+    <entity name="WFBOrder" representedClassName="WFBOrder" syncable="YES">
+        <attribute name="chineseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="families" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WFBFamily" inverseName="ordo" inverseEntity="WFBFamily" syncable="YES"/>
+    </entity>
+    <entity name="WFBSpecies" representedClassName="WFBSpecies" syncable="YES">
+        <attribute name="chineseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="species" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="birds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WFBBird" inverseName="species" inverseEntity="WFBBird" syncable="YES"/>
+        <relationship name="genus" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WFBGenus" inverseName="species" inverseEntity="WFBGenus" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="WFBOrder" positionX="-297" positionY="-342" width="126" height="88"/>
+        <element name="WFBFamily" positionX="-117" positionY="-342" width="128" height="103"/>
+        <element name="WFBGenus" positionX="63" positionY="-324" width="128" height="103"/>
+        <element name="WFBSpecies" positionX="241" positionY="-297" width="128" height="103"/>
+        <element name="WFBBird" positionX="459" positionY="-279" width="128" height="103"/>
+    </elements>
+</model>

@@ -16,6 +16,12 @@
 		D026DE3E1A3C0EC600302F78 /* WFBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE3D1A3C0EC600302F78 /* WFBTableViewController.m */; };
 		D026DE421A3C1F5000302F78 /* WFBBirdVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE411A3C1F5000302F78 /* WFBBirdVO.m */; };
 		D026DE451A3C83EF00302F78 /* WFBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */; };
+		D02CEA6F1A51697800819E3D /* Bird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA6D1A51697800819E3D /* Bird.xcdatamodeld */; };
+		D02CEA721A5194DB00819E3D /* WFBFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA711A5194DB00819E3D /* WFBFamily.m */; };
+		D02CEA751A5194DC00819E3D /* WFBGenus.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA741A5194DC00819E3D /* WFBGenus.m */; };
+		D02CEA781A5194DC00819E3D /* WFBSpecies.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA771A5194DC00819E3D /* WFBSpecies.m */; };
+		D02CEA7E1A5194DC00819E3D /* WFBOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA7D1A5194DC00819E3D /* WFBOrder.m */; };
+		D02CEA811A5195B200819E3D /* WFBBird.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA801A5195B200819E3D /* WFBBird.m */; };
 		D0F3D3211A3EF7450014C606 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D31F1A3EF7450014C606 /* pinyin.c */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +53,17 @@
 		D026DE411A3C1F5000302F78 /* WFBBirdVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBBirdVO.m; path = Model/WFBBirdVO.m; sourceTree = "<group>"; };
 		D026DE431A3C83EF00302F78 /* WFBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBTableViewCell.h; sourceTree = "<group>"; };
 		D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBTableViewCell.m; sourceTree = "<group>"; };
+		D02CEA6E1A51697800819E3D /* Bird.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bird.xcdatamodel; sourceTree = "<group>"; };
+		D02CEA701A5194DB00819E3D /* WFBFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFBFamily.h; path = Model/WFBFamily.h; sourceTree = "<group>"; };
+		D02CEA711A5194DB00819E3D /* WFBFamily.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBFamily.m; path = Model/WFBFamily.m; sourceTree = "<group>"; };
+		D02CEA731A5194DC00819E3D /* WFBGenus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFBGenus.h; path = Model/WFBGenus.h; sourceTree = "<group>"; };
+		D02CEA741A5194DC00819E3D /* WFBGenus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBGenus.m; path = Model/WFBGenus.m; sourceTree = "<group>"; };
+		D02CEA761A5194DC00819E3D /* WFBSpecies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFBSpecies.h; path = Model/WFBSpecies.h; sourceTree = "<group>"; };
+		D02CEA771A5194DC00819E3D /* WFBSpecies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBSpecies.m; path = Model/WFBSpecies.m; sourceTree = "<group>"; };
+		D02CEA7C1A5194DC00819E3D /* WFBOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFBOrder.h; path = Model/WFBOrder.h; sourceTree = "<group>"; };
+		D02CEA7D1A5194DC00819E3D /* WFBOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBOrder.m; path = Model/WFBOrder.m; sourceTree = "<group>"; };
+		D02CEA7F1A5195B200819E3D /* WFBBird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFBBird.h; path = Model/WFBBird.h; sourceTree = "<group>"; };
+		D02CEA801A5195B200819E3D /* WFBBird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBBird.m; path = Model/WFBBird.m; sourceTree = "<group>"; };
 		D0F3D31F1A3EF7450014C606 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
 		D0F3D3201A3EF7450014C606 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +109,7 @@
 			children = (
 				D026DE3C1A3C0EC600302F78 /* WFBTableViewController.h */,
 				D026DE3D1A3C0EC600302F78 /* WFBTableViewController.m */,
+				D02CEA6D1A51697800819E3D /* Bird.xcdatamodeld */,
 				D026DE431A3C83EF00302F78 /* WFBTableViewCell.h */,
 				D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */,
 				D026DE201A3A739400302F78 /* Main.storyboard */,
@@ -135,6 +153,16 @@
 		D026DE3F1A3C1EF000302F78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D02CEA7F1A5195B200819E3D /* WFBBird.h */,
+				D02CEA801A5195B200819E3D /* WFBBird.m */,
+				D02CEA7C1A5194DC00819E3D /* WFBOrder.h */,
+				D02CEA7D1A5194DC00819E3D /* WFBOrder.m */,
+				D02CEA761A5194DC00819E3D /* WFBSpecies.h */,
+				D02CEA771A5194DC00819E3D /* WFBSpecies.m */,
+				D02CEA731A5194DC00819E3D /* WFBGenus.h */,
+				D02CEA741A5194DC00819E3D /* WFBGenus.m */,
+				D02CEA701A5194DB00819E3D /* WFBFamily.h */,
+				D02CEA711A5194DB00819E3D /* WFBFamily.m */,
 				D026DE401A3C1F5000302F78 /* WFBBirdVO.h */,
 				D026DE411A3C1F5000302F78 /* WFBBirdVO.m */,
 			);
@@ -251,11 +279,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F3D3211A3EF7450014C606 /* pinyin.c in Sources */,
+				D02CEA6F1A51697800819E3D /* Bird.xcdatamodeld in Sources */,
 				D026DE1C1A3A739400302F78 /* AppDelegate.m in Sources */,
+				D02CEA751A5194DC00819E3D /* WFBGenus.m in Sources */,
+				D02CEA811A5195B200819E3D /* WFBBird.m in Sources */,
 				D026DE3E1A3C0EC600302F78 /* WFBTableViewController.m in Sources */,
 				D026DE191A3A739400302F78 /* main.m in Sources */,
 				D026DE421A3C1F5000302F78 /* WFBBirdVO.m in Sources */,
+				D02CEA7E1A5194DC00819E3D /* WFBOrder.m in Sources */,
 				D026DE451A3C83EF00302F78 /* WFBTableViewCell.m in Sources */,
+				D02CEA781A5194DC00819E3D /* WFBSpecies.m in Sources */,
+				D02CEA721A5194DB00819E3D /* WFBFamily.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +492,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D02CEA6D1A51697800819E3D /* Bird.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D02CEA6E1A51697800819E3D /* Bird.xcdatamodel */,
+			);
+			currentVersion = D02CEA6E1A51697800819E3D /* Bird.xcdatamodel */;
+			path = Bird.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D026DE0B1A3A739400302F78 /* Project object */;
 }
