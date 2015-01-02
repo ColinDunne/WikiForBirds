@@ -1,108 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YDd-3a-gmo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ORX-hV-cil">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Wiki For Birds-->
-        <scene sceneID="8w1-7N-NBo">
+        <!--Order-->
+        <scene sceneID="LrI-55-blF">
             <objects>
-                <tableViewController id="VKa-rP-cGD" customClass="WFBTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="wYj-AY-X7Y">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="Ctz-NE-zIu" customClass="WFBOrderTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cxe-DE-shF">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="bird" rowHeight="60" id="C9g-Wx-80O" customClass="WFBTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Order" textLabel="CLL-st-2D3" detailTextLabel="KQu-Q5-QO5" style="IBUITableViewCellStyleSubtitle" id="po9-AM-2d5" customClass="WFBTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C9g-Wx-80O" id="NqF-sn-e1y">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="po9-AM-2d5" id="S0e-Gc-Rjp">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cfa-TV-cRs">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                            </variation>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb1-Kh-Bp1">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ChineseName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CLL-st-2D3">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="68" y="8" width="225" height="21"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             </variation>
                                         </label>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-9X-6wK">
-                                            <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="20" y="20" width="20" height="20"/>
-                                            </variation>
-                                        </activityIndicatorView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vy-lc-efs">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KQu-Q5-QO5">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="68" y="30" width="225" height="21"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             </variation>
                                         </label>
                                     </subviews>
-                                    <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="cfa-TV-cRs"/>
-                                            <exclude reference="Cb1-Kh-Bp1"/>
-                                            <exclude reference="5lg-9X-6wK"/>
-                                            <exclude reference="6Vy-lc-efs"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="widthClass=compact">
-                                        <mask key="subviews">
-                                            <include reference="cfa-TV-cRs"/>
-                                            <include reference="Cb1-Kh-Bp1"/>
-                                            <include reference="5lg-9X-6wK"/>
-                                            <include reference="6Vy-lc-efs"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="chineseName" destination="Cb1-Kh-Bp1" id="y8I-jj-BaX"/>
-                                    <outlet property="englishName" destination="6Vy-lc-efs" id="MmQ-Pp-5LX"/>
-                                    <outlet property="spinner" destination="5lg-9X-6wK" id="zOw-94-2B5"/>
-                                    <outlet property="thumbnailImageView" destination="cfa-TV-cRs" id="FFZ-yV-7w7"/>
+                                    <outlet property="chineseName" destination="CLL-st-2D3" id="BvE-Ew-oSE"/>
+                                    <outlet property="name" destination="KQu-Q5-QO5" id="1Zp-F7-CEt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="VKa-rP-cGD" id="VLb-oi-rBY"/>
-                            <outlet property="delegate" destination="VKa-rP-cGD" id="2rz-cs-Vx4"/>
+                            <outlet property="dataSource" destination="Ctz-NE-zIu" id="gGQ-Zb-EH2"/>
+                            <outlet property="delegate" destination="Ctz-NE-zIu" id="eOQ-77-MK3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Wiki For Birds" id="YOK-fr-PH7"/>
+                    <navigationItem key="navigationItem" title="Order" id="fxE-6G-AgY"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tcx-0C-nBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjZ-np-5hW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="391"/>
+            <point key="canvasLocation" x="1782" y="393"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="851-IE-j0h">
+        <scene sceneID="fO7-tT-UjU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YDd-3a-gmo" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ORX-hV-cil" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ze-L0-rCi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nib-PA-98F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VKa-rP-cGD" kind="relationship" relationship="rootViewController" id="TJT-5H-Qnj"/>
+                        <segue destination="Ctz-NE-zIu" kind="relationship" relationship="rootViewController" id="czy-FA-M8e"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T25-ut-Qk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1X-aU-1Qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="391"/>
+            <point key="canvasLocation" x="864" y="393"/>
         </scene>
     </scenes>
 </document>
