@@ -18,4 +18,12 @@
 @dynamic genus;
 @dynamic birds;
 
++ (NSString *)entityName {
+    return @"WFBSpecies";
+}
+
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc {
+    return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:moc];
+}
+
 @end

@@ -18,4 +18,12 @@
 @dynamic ordo;
 @dynamic genera;
 
++ (NSString *)entityName {
+    return @"WFBFamily";
+}
+
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc {
+    return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:moc];
+}
+
 @end

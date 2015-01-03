@@ -26,4 +26,7 @@
 - (void)addBirds:(NSSet *)values;
 - (void)removeBirds:(NSSet *)values;
 
++ (NSString *)entityName;
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc;
+
 @end

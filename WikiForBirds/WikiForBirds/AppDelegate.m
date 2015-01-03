@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "WFBOrderTableViewController.h"
 #import "WFBOrder.h"
+#import "WFBFamily.h"
+#import "WFBGenus.h"
+#import "WFBSpecies.h"
 
 @interface AppDelegate ()
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -83,41 +86,122 @@
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] init];
     [context setPersistentStoreCoordinator:coordinator];
     
-    WFBOrder *order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    WFBOrder *order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"鸵鸟目";
     order.name = @"Struthioniformes";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"鸽形目";
     order.name = @"Columbiformes";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"鹦形目";
     order.name = @"Psittaciformes";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"隼形目";
     order.name = @"Falconiformes";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"企鹅目";
     order.name = @"Spheniscidae";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"雁形目";
     order.name = @"Anseriformes";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"鸡形目";
     order.name = @"Galliformes";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"鹃形目";
     order.name = @"Cuculiformes";
     
-    order = [NSEntityDescription insertNewObjectForEntityForName:@"WFBOrder" inManagedObjectContext:context];
+    order = [WFBOrder insertNewObjectInManagedObjectContext:context];
     order.chineseName = @"雀形目";
     order.name = @"Passeriformes";
+    
+    WFBFamily *family = [WFBFamily insertNewObjectInManagedObjectContext:context];
+    family.name = @"Alaudidae";
+    family.chineseName = @"百灵科";
+    family.ordo = order;
+    
+    family = [WFBFamily insertNewObjectInManagedObjectContext:context];
+    family.name = @"Hirundinidae";
+    family.chineseName = @"燕科";
+    family.ordo = order;
+    
+    family = [WFBFamily insertNewObjectInManagedObjectContext:context];
+    family.name = @"Corvidae";
+    family.chineseName = @"鸦科";
+    family.ordo = order;
+    
+    family = [WFBFamily insertNewObjectInManagedObjectContext:context];
+    family.name = @"Passeridae";
+    family.chineseName = @"雀科";
+    family.ordo = order;
+    
+    WFBGenus *genus = [WFBGenus insertNewObjectInManagedObjectContext:context];
+    genus.name = @"Montifringilla";
+    genus.chineseName = @"雪雀属";
+    genus.family = family;
+    
+    genus = [WFBGenus insertNewObjectInManagedObjectContext:context];
+    genus.name = @"Histurgops";
+    genus.chineseName = @"棕尾织雀属";
+    genus.family = family;
+    
+    genus = [WFBGenus insertNewObjectInManagedObjectContext:context];
+    genus.name = @"Carpospiza";
+    genus.chineseName = @"淡色石雀属";
+    genus.family = family;
+    
+    genus = [WFBGenus insertNewObjectInManagedObjectContext:context];
+    genus.name = @"Onychostruthus";
+    genus.chineseName = @"白腰雪雀属";
+    genus.family = family;
+    
+    genus = [WFBGenus insertNewObjectInManagedObjectContext:context];
+    genus.name = @"Passer";
+    genus.chineseName = @"雀属";
+    genus.family = family;
+    
+    WFBSpecies *species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
+    species.name = @"Passer domesticus";
+    species.chineseName = @"家麻雀";
+    species.genus = genus;
+    
+    species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
+    species.name = @"Passer ammodendri";
+    species.chineseName = @"黑顶麻雀";
+    species.genus = genus;
+    
+    species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
+    species.name = @"Passer pyrrhonotus";
+    species.chineseName = @"丛林麻雀";
+    species.genus = genus;
+    
+    species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
+    species.name = @"Passer moabiticus";
+    species.chineseName = @"死海麻雀";
+    species.genus = genus;
+    
+    species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
+    species.name = @"Passer melanurus";
+    species.chineseName = @"南非麻雀";
+    species.genus = genus;
+    
+    species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
+    species.name = @"Passer suahelicus";
+    species.chineseName = @"东非麻雀";
+    species.genus = genus;
+    
+    species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
+    species.name = @"Passer luteus";
+    species.chineseName = @"金麻雀";
+    species.genus = genus;
+    
     
     [context save:NULL];
 }

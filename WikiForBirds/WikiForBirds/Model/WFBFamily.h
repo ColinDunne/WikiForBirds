@@ -26,4 +26,7 @@
 - (void)addGenera:(NSSet *)values;
 - (void)removeGenera:(NSSet *)values;
 
++ (NSString *)entityName;
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc;
+
 @end

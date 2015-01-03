@@ -16,4 +16,12 @@
 @dynamic chineseName;
 @dynamic families;
 
++ (NSString *)entityName {
+    return @"WFBOrder";
+}
+
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc {
+    return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:moc];
+}
+
 @end

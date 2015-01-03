@@ -25,4 +25,7 @@
 - (void)addFamilies:(NSSet *)values;
 - (void)removeFamilies:(NSSet *)values;
 
++ (NSString *)entityName;
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc;
+
 @end

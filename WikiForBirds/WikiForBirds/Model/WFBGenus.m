@@ -18,4 +18,12 @@
 @dynamic family;
 @dynamic species;
 
++ (NSString *)entityName {
+    return @"WFBGenus";
+}
+
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc {
+    return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:moc];
+}
+
 @end

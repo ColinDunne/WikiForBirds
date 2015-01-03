@@ -26,4 +26,7 @@
 - (void)addSpecies:(NSSet *)values;
 - (void)removeSpecies:(NSSet *)values;
 
++ (NSString *)entityName;
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc;
+
 @end
