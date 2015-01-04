@@ -21,6 +21,7 @@
 		D02CEA8D1A56912300819E3D /* WFBOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA8C1A56912300819E3D /* WFBOrder.m */; };
 		D02CEA901A56912400819E3D /* WFBBird.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA8F1A56912400819E3D /* WFBBird.m */; };
 		D02CEA931A56AF6700819E3D /* WFBOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA921A56AF6700819E3D /* WFBOrderTableViewController.m */; };
+		D02CEA991A594A7B00819E3D /* WFBFamilyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA981A594A7B00819E3D /* WFBFamilyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		D02CEA8F1A56912400819E3D /* WFBBird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBBird.m; path = Model/WFBBird.m; sourceTree = "<group>"; };
 		D02CEA911A56AF6700819E3D /* WFBOrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBOrderTableViewController.h; sourceTree = "<group>"; };
 		D02CEA921A56AF6700819E3D /* WFBOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBOrderTableViewController.m; sourceTree = "<group>"; };
+		D02CEA971A594A7B00819E3D /* WFBFamilyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBFamilyTableViewController.h; sourceTree = "<group>"; };
+		D02CEA981A594A7B00819E3D /* WFBFamilyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBFamilyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				D02CEA911A56AF6700819E3D /* WFBOrderTableViewController.h */,
 				D02CEA921A56AF6700819E3D /* WFBOrderTableViewController.m */,
+				D02CEA971A594A7B00819E3D /* WFBFamilyTableViewController.h */,
+				D02CEA981A594A7B00819E3D /* WFBFamilyTableViewController.m */,
 				D026DE201A3A739400302F78 /* Main.storyboard */,
 				D026DE3F1A3C1EF000302F78 /* Model */,
 				D026DE161A3A739400302F78 /* Supporting Files */,
@@ -267,6 +272,7 @@
 				D02CEA871A56912300819E3D /* WFBSpecies.m in Sources */,
 				D026DE191A3A739400302F78 /* main.m in Sources */,
 				D02CEA8D1A56912300819E3D /* WFBOrder.m in Sources */,
+				D02CEA991A594A7B00819E3D /* WFBFamilyTableViewController.m in Sources */,
 				D026DE421A3C1F5000302F78 /* WFBBirdVO.m in Sources */,
 				D02CEA841A56912300819E3D /* WFBGenus.m in Sources */,
 				D02CEA931A56AF6700819E3D /* WFBOrderTableViewController.m in Sources */,

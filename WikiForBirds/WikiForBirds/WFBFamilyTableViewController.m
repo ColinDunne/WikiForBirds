@@ -1,20 +1,19 @@
 //
-//  WFBOrderTableViewController.m
+//  WFBFamilyTableViewController.m
 //  WikiForBirds
 //
-//  Created by 钱辰 on 15/1/2.
+//  Created by 钱辰 on 15/1/4.
 //  Copyright (c) 2015年 qianchen. All rights reserved.
 //
 
-#import "WFBOrderTableViewController.h"
 #import "WFBFamilyTableViewController.h"
-#import "WFBOrder.h"
+#import "WFBFamily.h"
 
-@interface WFBOrderTableViewController ()
+@interface WFBFamilyTableViewController ()
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
-@implementation WFBOrderTableViewController
+@implementation WFBFamilyTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,15 +47,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Order" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Family" forIndexPath:indexPath];
     
-    WFBOrder *order = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = order.chineseName;
-    cell.detailTextLabel.text = order.name;
+    WFBFamily *family = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = family.chineseName;
+    cell.detailTextLabel.text = family.name;
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -92,24 +90,15 @@
 }
 */
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    if (indexPath) {
-        if ([segue.identifier isEqualToString:@"toFamily"]) {
-            if ([segue.destinationViewController isKindOfClass:[WFBFamilyTableViewController class]]) {
-                WFBFamilyTableViewController *familyTVC = (WFBFamilyTableViewController *)segue.destinationViewController;
-                WFBOrder *order = [self.fetchedResultsController objectAtIndexPath:indexPath];
-                familyTVC.order = order;
-            }
-        }
-    }
-    
 }
+*/
 
 #pragma mark - Fetched results controller
 
@@ -120,23 +109,27 @@
     
     // Set up the fetched results controller.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WFBOrder"
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WFBFamily"
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setFetchBatchSize:20];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"ordo = %@",self.order];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    NSSortDescriptor *sortDescirptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortDescirptor];
+    
+    fetchRequest.fetchBatchSize = 20;
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                     managedObjectContext:self.managedObjectContext
                                                                       sectionNameKeyPath:nil
                                                                                cacheName:nil];
-    _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
-    
+}
+
+- (NSManagedObjectContext *)managedObjectContext {
+    return self.order.managedObjectContext;
 }
 
 @end
