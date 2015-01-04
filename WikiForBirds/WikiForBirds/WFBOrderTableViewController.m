@@ -7,7 +7,6 @@
 //
 
 #import "WFBOrderTableViewController.h"
-#import "WFBTableViewCell.h"
 #import "WFBOrder.h"
 
 @interface WFBOrderTableViewController ()
@@ -48,11 +47,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    WFBTableViewCell *cell = (WFBTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Order" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Order" forIndexPath:indexPath];
     
     WFBOrder *order = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.name.text = order.name;
-    cell.chineseName.text = order.chineseName;
+    cell.textLabel.text = order.chineseName;
+    cell.detailTextLabel.text = order.name;
     
     return cell;
 }
@@ -92,15 +91,16 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"toFamily"]) {
+        
+    }
 }
-*/
 
 #pragma mark - Fetched results controller
 

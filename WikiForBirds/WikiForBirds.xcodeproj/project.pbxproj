@@ -14,7 +14,6 @@
 		D026DE271A3A739400302F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D026DE251A3A739400302F78 /* LaunchScreen.xib */; };
 		D026DE331A3A739400302F78 /* WikiForBirdsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE321A3A739400302F78 /* WikiForBirdsTests.m */; };
 		D026DE421A3C1F5000302F78 /* WFBBirdVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE411A3C1F5000302F78 /* WFBBirdVO.m */; };
-		D026DE451A3C83EF00302F78 /* WFBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */; };
 		D02CEA6F1A51697800819E3D /* Bird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA6D1A51697800819E3D /* Bird.xcdatamodeld */; };
 		D02CEA841A56912300819E3D /* WFBGenus.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA831A56912300819E3D /* WFBGenus.m */; };
 		D02CEA871A56912300819E3D /* WFBSpecies.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA861A56912300819E3D /* WFBSpecies.m */; };
@@ -48,8 +47,6 @@
 		D026DE321A3A739400302F78 /* WikiForBirdsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WikiForBirdsTests.m; sourceTree = "<group>"; };
 		D026DE401A3C1F5000302F78 /* WFBBirdVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFBBirdVO.h; path = Model/WFBBirdVO.h; sourceTree = "<group>"; };
 		D026DE411A3C1F5000302F78 /* WFBBirdVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBBirdVO.m; path = Model/WFBBirdVO.m; sourceTree = "<group>"; };
-		D026DE431A3C83EF00302F78 /* WFBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBTableViewCell.h; sourceTree = "<group>"; };
-		D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBTableViewCell.m; sourceTree = "<group>"; };
 		D02CEA6E1A51697800819E3D /* Bird.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bird.xcdatamodel; sourceTree = "<group>"; };
 		D02CEA821A56912300819E3D /* WFBGenus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFBGenus.h; path = Model/WFBGenus.h; sourceTree = "<group>"; };
 		D02CEA831A56912300819E3D /* WFBGenus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFBGenus.m; path = Model/WFBGenus.m; sourceTree = "<group>"; };
@@ -106,8 +103,6 @@
 			children = (
 				D02CEA911A56AF6700819E3D /* WFBOrderTableViewController.h */,
 				D02CEA921A56AF6700819E3D /* WFBOrderTableViewController.m */,
-				D026DE431A3C83EF00302F78 /* WFBTableViewCell.h */,
-				D026DE441A3C83EF00302F78 /* WFBTableViewCell.m */,
 				D026DE201A3A739400302F78 /* Main.storyboard */,
 				D026DE3F1A3C1EF000302F78 /* Model */,
 				D026DE161A3A739400302F78 /* Supporting Files */,
@@ -275,7 +270,6 @@
 				D026DE421A3C1F5000302F78 /* WFBBirdVO.m in Sources */,
 				D02CEA841A56912300819E3D /* WFBGenus.m in Sources */,
 				D02CEA931A56AF6700819E3D /* WFBOrderTableViewController.m in Sources */,
-				D026DE451A3C83EF00302F78 /* WFBTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
