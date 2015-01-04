@@ -26,6 +26,7 @@
         abort();
     }
     
+    self.title = self.order.chineseName;
 }
 
 - (void)didReceiveMemoryWarning {
