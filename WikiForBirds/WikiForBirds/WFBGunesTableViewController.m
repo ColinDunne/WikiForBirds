@@ -1,20 +1,19 @@
 //
-//  WFBOrderTableViewController.m
+//  WFBGunesTableViewController.m
 //  WikiForBirds
 //
-//  Created by 钱辰 on 15/1/2.
+//  Created by 钱辰 on 15/3/4.
 //  Copyright (c) 2015年 qianchen. All rights reserved.
 //
 
-#import "WFBOrderTableViewController.h"
-#import "WFBFamilyTableViewController.h"
-#import "WFBOrder.h"
+#import "WFBGunesTableViewController.h"
+#import "WFBGenus.h"
 
-@interface WFBOrderTableViewController ()
+@interface WFBGunesTableViewController ()
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
-@implementation WFBOrderTableViewController
+@implementation WFBGunesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +26,7 @@
         abort();
     }
     
+    self.title = self.family.chineseName;
 }
 
 #pragma mark - Table view data source
@@ -43,31 +43,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Order" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Genus" forIndexPath:indexPath];
     
-    WFBOrder *order = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = order.chineseName;
-    cell.detailTextLabel.text = order.name;
+    WFBGenus *genus = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = genus.chineseName;
+    cell.detailTextLabel.text = genus.name;
     
     return cell;
-}
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    if (indexPath) {
-        if ([segue.identifier isEqualToString:@"toFamily"]) {
-            if ([segue.destinationViewController isKindOfClass:[WFBFamilyTableViewController class]]) {
-                WFBFamilyTableViewController *familyTVC = (WFBFamilyTableViewController *)segue.destinationViewController;
-                WFBOrder *order = [self.fetchedResultsController objectAtIndexPath:indexPath];
-                familyTVC.order = order;
-            }
-        }
-    }
-    
 }
 
 #pragma mark - Fetched results controller
@@ -79,23 +61,27 @@
     
     // Set up the fetched results controller.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WFBOrder"
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WFBGenus"
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setFetchBatchSize:20];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"family = %@",self.family];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    NSSortDescriptor *sortDescirptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortDescirptor];
+    
+    fetchRequest.fetchBatchSize = 20;
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                     managedObjectContext:self.managedObjectContext
                                                                       sectionNameKeyPath:nil
                                                                                cacheName:nil];
-    _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
-    
+}
+
+- (NSManagedObjectContext *)managedObjectContext {
+    return self.family.managedObjectContext;
 }
 
 @end
