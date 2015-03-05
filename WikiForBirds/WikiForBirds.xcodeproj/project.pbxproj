@@ -22,7 +22,8 @@
 		D02CEA901A56912400819E3D /* WFBBird.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA8F1A56912400819E3D /* WFBBird.m */; };
 		D02CEA931A56AF6700819E3D /* WFBOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA921A56AF6700819E3D /* WFBOrderTableViewController.m */; };
 		D02CEA991A594A7B00819E3D /* WFBFamilyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02CEA981A594A7B00819E3D /* WFBFamilyTableViewController.m */; };
-		D07A313A1AA72B1B002C4D84 /* WFBGunesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07A31391AA72B1B002C4D84 /* WFBGunesTableViewController.m */; };
+		D07A313A1AA72B1B002C4D84 /* WFBGenusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07A31391AA72B1B002C4D84 /* WFBGenusTableViewController.m */; };
+		D07A313D1AA83D49002C4D84 /* WFBSpeciesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07A313C1AA83D49002C4D84 /* WFBSpeciesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +65,10 @@
 		D02CEA921A56AF6700819E3D /* WFBOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBOrderTableViewController.m; sourceTree = "<group>"; };
 		D02CEA971A594A7B00819E3D /* WFBFamilyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBFamilyTableViewController.h; sourceTree = "<group>"; };
 		D02CEA981A594A7B00819E3D /* WFBFamilyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBFamilyTableViewController.m; sourceTree = "<group>"; };
-		D07A31381AA72B1B002C4D84 /* WFBGunesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBGunesTableViewController.h; sourceTree = "<group>"; };
-		D07A31391AA72B1B002C4D84 /* WFBGunesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBGunesTableViewController.m; sourceTree = "<group>"; };
+		D07A31381AA72B1B002C4D84 /* WFBGenusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBGenusTableViewController.h; sourceTree = "<group>"; };
+		D07A31391AA72B1B002C4D84 /* WFBGenusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBGenusTableViewController.m; sourceTree = "<group>"; };
+		D07A313B1AA83D49002C4D84 /* WFBSpeciesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBSpeciesTableViewController.h; sourceTree = "<group>"; };
+		D07A313C1AA83D49002C4D84 /* WFBSpeciesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBSpeciesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +114,10 @@
 				D02CEA921A56AF6700819E3D /* WFBOrderTableViewController.m */,
 				D02CEA971A594A7B00819E3D /* WFBFamilyTableViewController.h */,
 				D02CEA981A594A7B00819E3D /* WFBFamilyTableViewController.m */,
-				D07A31381AA72B1B002C4D84 /* WFBGunesTableViewController.h */,
-				D07A31391AA72B1B002C4D84 /* WFBGunesTableViewController.m */,
+				D07A31381AA72B1B002C4D84 /* WFBGenusTableViewController.h */,
+				D07A31391AA72B1B002C4D84 /* WFBGenusTableViewController.m */,
+				D07A313B1AA83D49002C4D84 /* WFBSpeciesTableViewController.h */,
+				D07A313C1AA83D49002C4D84 /* WFBSpeciesTableViewController.m */,
 				D026DE201A3A739400302F78 /* Main.storyboard */,
 				D026DE3F1A3C1EF000302F78 /* Model */,
 				D026DE161A3A739400302F78 /* Supporting Files */,
@@ -274,7 +279,8 @@
 				D026DE1C1A3A739400302F78 /* AppDelegate.m in Sources */,
 				D02CEA901A56912400819E3D /* WFBBird.m in Sources */,
 				D02CEA8A1A56912300819E3D /* WFBFamily.m in Sources */,
-				D07A313A1AA72B1B002C4D84 /* WFBGunesTableViewController.m in Sources */,
+				D07A313A1AA72B1B002C4D84 /* WFBGenusTableViewController.m in Sources */,
+				D07A313D1AA83D49002C4D84 /* WFBSpeciesTableViewController.m in Sources */,
 				D02CEA871A56912300819E3D /* WFBSpecies.m in Sources */,
 				D026DE191A3A739400302F78 /* main.m in Sources */,
 				D02CEA8D1A56912300819E3D /* WFBOrder.m in Sources */,

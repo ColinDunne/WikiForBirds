@@ -6,14 +6,15 @@
 //  Copyright (c) 2015年 qianchen. All rights reserved.
 //
 
-#import "WFBGunesTableViewController.h"
+#import "WFBGenusTableViewController.h"
+#import "WFBSpeciesTableViewController.h"
 #import "WFBGenus.h"
 
-@interface WFBGunesTableViewController ()
+@interface WFBGenusTableViewController ()
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
-@implementation WFBGunesTableViewController
+@implementation WFBGenusTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,6 +51,24 @@
     cell.detailTextLabel.text = genus.name;
     
     return cell;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    if (indexPath) {
+        if ([segue.identifier isEqualToString:@"toSpecies"]) {
+            if ([segue.destinationViewController isKindOfClass:[WFBSpeciesTableViewController class]]) {
+                WFBSpeciesTableViewController *speciesTVC = (WFBSpeciesTableViewController *)segue.destinationViewController;
+                WFBGenus *genus = [self.fetchedResultsController objectAtIndexPath:indexPath];
+                speciesTVC.genus = genus;
+            }
+        }
+    }
+    
 }
 
 #pragma mark - Fetched results controller

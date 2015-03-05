@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "WFBFamily.h"
 
-@interface WFBGunesTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface WFBGenusTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 @property (strong,nonatomic) WFBFamily *family;
 @property (strong,nonatomic) NSManagedObjectContext *managedObjectContext;
 @end

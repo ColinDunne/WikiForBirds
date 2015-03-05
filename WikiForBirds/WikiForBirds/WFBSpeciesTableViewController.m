@@ -1,20 +1,19 @@
 //
-//  WFBFamilyTableViewController.m
+//  WFBSpeciesTableViewController.m
 //  WikiForBirds
 //
-//  Created by 钱辰 on 15/1/4.
+//  Created by 钱辰 on 15/3/5.
 //  Copyright (c) 2015年 qianchen. All rights reserved.
 //
 
-#import "WFBFamilyTableViewController.h"
-#import "WFBGenusTableViewController.h"
-#import "WFBFamily.h"
+#import "WFBSpeciesTableViewController.h"
+#import "WFBSpecies.h"
 
-@interface WFBFamilyTableViewController ()
+@interface WFBSpeciesTableViewController ()
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
-@implementation WFBFamilyTableViewController
+@implementation WFBSpeciesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +26,7 @@
         abort();
     }
     
-    self.title = self.order.chineseName;
+    self.title = self.genus.chineseName;
 }
 
 #pragma mark - Table view data source
@@ -44,31 +43,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Family" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Species" forIndexPath:indexPath];
     
-    WFBFamily *family = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = family.chineseName;
-    cell.detailTextLabel.text = family.name;
+    WFBGenus *genus = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = genus.chineseName;
+    cell.detailTextLabel.text = genus.name;
     
     return cell;
-}
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    if (indexPath) {
-        if ([segue.identifier isEqualToString:@"toGenus"]) {
-            if ([segue.destinationViewController isKindOfClass:[WFBGenusTableViewController class]]) {
-                WFBGenusTableViewController *genusTVC = (WFBGenusTableViewController *)segue.destinationViewController;
-                WFBFamily *family = [self.fetchedResultsController objectAtIndexPath:indexPath];
-                genusTVC.family = family;
-            }
-        }
-    }
-    
 }
 
 #pragma mark - Fetched results controller
@@ -80,11 +61,11 @@
     
     // Set up the fetched results controller.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WFBFamily"
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WFBSpecies"
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"ordo = %@",self.order];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"genus = %@",self.genus];
     
     NSSortDescriptor *sortDescirptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     fetchRequest.sortDescriptors = @[sortDescirptor];
@@ -100,7 +81,7 @@
 }
 
 - (NSManagedObjectContext *)managedObjectContext {
-    return self.order.managedObjectContext;
+    return self.genus.managedObjectContext;
 }
 
 @end
