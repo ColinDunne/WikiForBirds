@@ -15,6 +15,7 @@
 
 @dynamic name;
 @dynamic chineseName;
+@dynamic thumbnail;
 @dynamic genus;
 @dynamic birds;
 

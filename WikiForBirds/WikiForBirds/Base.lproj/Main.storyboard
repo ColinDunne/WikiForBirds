@@ -160,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Species" textLabel="RdQ-qp-VAm" detailTextLabel="ZVu-Eq-PE8" style="IBUITableViewCellStyleSubtitle" id="WHl-KX-hh6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Species" textLabel="RdQ-qp-VAm" detailTextLabel="ZVu-Eq-PE8" imageView="UBG-2w-T84" style="IBUITableViewCellStyleSubtitle" id="WHl-KX-hh6">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WHl-KX-hh6" id="Sid-1W-EfP">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -183,6 +183,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             </variation>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="defaultImage" id="UBG-2w-T84">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -216,4 +219,7 @@
             <point key="canvasLocation" x="864" y="393"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultImage" width="1440" height="900"/>
+    </resources>
 </document>

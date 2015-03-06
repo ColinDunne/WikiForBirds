@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * chineseName;
+@property (nonatomic, retain) NSString * thumbnail;
 @property (nonatomic, retain) WFBGenus *genus;
 @property (nonatomic, retain) NSSet *birds;
 @end

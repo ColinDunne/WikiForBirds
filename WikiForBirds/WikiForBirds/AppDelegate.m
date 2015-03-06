@@ -171,36 +171,43 @@
     species.name = @"Passer domesticus";
     species.chineseName = @"家麻雀";
     species.genus = genus;
+    species.thumbnail = @"http://photo.niaolei.org.cn/uploads/201304/1366043811njCdX3uo.jpg";
     
     species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
     species.name = @"Passer ammodendri";
     species.chineseName = @"黑顶麻雀";
     species.genus = genus;
+    species.thumbnail = @"http://photo.niaolei.org.cn/uploads/201309/1380083975u261A5ng.jpg";
     
     species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
     species.name = @"Passer pyrrhonotus";
     species.chineseName = @"丛林麻雀";
     species.genus = genus;
+    species.thumbnail = @"http://photo.niaolei.org.cn/uploads/201312/1385975656XMsVm56l.jpg";
     
     species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
     species.name = @"Passer moabiticus";
     species.chineseName = @"死海麻雀";
     species.genus = genus;
+    species.thumbnail = @"http://photo.niaolei.org.cn/uploads/201301/13576367679HS69ejf.jpg";
     
     species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
     species.name = @"Passer melanurus";
     species.chineseName = @"南非麻雀";
     species.genus = genus;
+    species.thumbnail = @"http://photo.niaolei.org.cn/uploads/201312/1385976293NuITnLjk.jpg";
     
     species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
-    species.name = @"Passer suahelicus";
-    species.chineseName = @"东非麻雀";
+    species.name = @"Passer hispaniolensis";
+    species.chineseName = @"黑胸麻雀";
     species.genus = genus;
+    species.thumbnail = @"http://photo.niaolei.org.cn/uploads/201306/1372060004dNLb9zbt.jpg";
     
     species = [WFBSpecies insertNewObjectInManagedObjectContext:context];
-    species.name = @"Passer luteus";
-    species.chineseName = @"金麻雀";
+    species.name = @"Passer montanus";
+    species.chineseName = @"树麻雀";
     species.genus = genus;
+    species.thumbnail = @"http://photo.niaolei.org.cn/uploads/201305/1368360432RJoQjUJg.jpg";
     
     
     [context save:NULL];

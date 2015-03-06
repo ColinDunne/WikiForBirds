@@ -45,9 +45,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Species" forIndexPath:indexPath];
     
-    WFBGenus *genus = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = genus.chineseName;
-    cell.detailTextLabel.text = genus.name;
+    WFBSpecies *species = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = species.chineseName;
+    cell.detailTextLabel.text = species.name;
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:species.thumbnail]]];
     
     return cell;
 }
